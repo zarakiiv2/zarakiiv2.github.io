@@ -1,0 +1,171 @@
+body {
+  background-color: #333;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif
+}
+/* --- NAVBAR STYLING --- */
+.navbar {
+  background-color: #333;   /* sets the navbar background to dark gray/black */
+  padding: 10px;            /* adds space inside navbar (top/bottom/left/right) */
+  text-align: center;       /* centers all the <a> links horizontally */
+
+  position: fixed;          /* makes navbar stay fixed on screen while scrolling */
+  top: 0;                   /* positions navbar at very top of the page */
+  left: 0;                  /* aligns it to the left edge */
+  width: 100%;              /* stretches navbar full width across screen */
+  z-index: 1000;            /* keeps navbar above all other content */
+}
+
+/* --- NAVBAR LINKS --- */
+.navbar a {
+  color: white;             /* link text color (normal state) */
+  text-decoration: none;    /* removes the underline under links */
+  margin: 0 20px;           /* adds horizontal spacing between links */
+  font-size: 18px;          /* sets text size */
+  font-weight: bold;        /* makes text bold */
+  transition: color 0.3s;   /* smooth color change when hovered */
+}
+
+/* Hover state (when mouse is over a link) */
+.navbar a:hover {
+  color: #99e977;           /* changes link text color on hover */
+}
+
+/* Active link (the page you're on) */
+.navbar a.active {
+  color: rgb(153, 233, 119);            /* makes the current page link stand out */
+  border-bottom: 2px solid rgb(153, 233, 119); /* underline effect for extra emphasis */
+  position: relative;       /* needed so we can position the underline effect */
+  transition: color 0.3s; 
+}
+
+/* Add a fake underline (invisible at first) */
+.navbar a::after {
+  content: "";                        /* generates an empty element */
+  position: absolute;                 /* positions underline relative to the link */
+  left: 0;                            /* start at left edge */
+  bottom: -9px;                       /* sit just below the text */
+  width: 0%;                          /* invisible at first (0 width) */
+  height: 8px;                        /* thickness of underline */
+  background-color: #b4f583;          /* color of underline */
+  transition: width 0.3s ease-in-out; /* animate when width changes */
+}
+
+/* On hover, expand the underline */
+.navbar a:hover::after {
+  width: 100%;                        /* underline grows across the link */
+}
+
+/* Keep active link highlighted (like before) */
+.navbar a.active {
+  color: rgb(183, 255, 152);                      
+}
+
+.navbar a.active::after {
+  width: 100%;                        /* underline stays visible */
+  background-color: rgb(156, 255, 143);           
+}
+
+/* --- BODY STYLING --- */
+body {
+  margin: 0;                /* removes default browser margin around page */
+  padding-top: 60px;        /* pushes content down so it isn’t hidden behind navbar */
+}
+p {
+  font-size: 25px;
+    line-height: 1.6;  
+    color: #333;       /* adds space between lines for readability */
+}
+
+a {
+  color: #333;           /* sets link color to light gray */
+  text-decoration: none;    /* removes underline from links */
+}
+
+hr {
+  border: none;             /* removes default border */
+  height: 4px;              /* sets height of the line */
+  background-color: #333;/* sets color of the line */
+  margin: 20px 0;           /* adds vertical spacing around the line */
+}
+/* --- MAIN CONTENT AREA --- */
+.main-center {
+  /*max-width: 800px;         /* limits content width for better readability */
+  margin: 20px auto;        /* centers content and adds vertical spacing */
+  padding: 9px;            /* adds space inside the content area */
+  background-color: #b4f583;/* light gray background for contrast */
+  box-shadow: 0 2px 5px rgba(0,0,0.2,0.4); /* subtle shadow for depth */
+  left: 0;
+  width: 100%;
+  border-color: #333;
+ 
+}
+
+.mini-center{
+    /*max-width: 800px;         /* limits content width for better readability */
+  margin: 20px auto;        /* centers content and adds vertical spacing */
+  padding: 9px;            /* adds space inside the content area */
+  background-color: #b4f583;/* light gray background for contrast */
+  box-shadow: 0 2px 5px rgba(0,0,0.2,0.4); /* subtle shadow for depth */
+  left: 0;
+  width: 70%;
+  border-color: #333;
+  border-radius: 12px;
+  max-width: 80%;
+  min-width: 400px;
+}
+
+.bg {
+  background-color: #d2d2d2; /* light gray background for contrast */
+  padding: 20px;             /* adds space inside the background */
+  border-radius: 8px;       /* rounds corners of the background */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow for depth */
+  width: 70%;
+  align-items: center; /* centers content horizontally */
+  margin: 0 auto; /* centers the background on the page */
+}
+.post-title {
+  font-size: 50px;          /* larger text for titles */
+}
+
+.text {
+  font-size: 20px;          /* smaller text for body content */
+  line-height: 1.6;         /* improves readability with more space between lines */
+  min-width: 300 px;
+  max-width: 1000px;         /* limits width for better readability */
+}
+
+address{
+  font-style: normal;       /* removes italic style from address */
+  margin-top: 20px;         /* adds space above the address */
+  text-align: center;       /* centers the address text */
+}
+
+.group-link{
+  display: flex;            /* uses flexbox for layout */
+  justify-content: center;  /* centers items horizontally */
+  align-items: center;      /* centers items vertically */
+  flex-wrap: wrap;          /* allows items to wrap to the next line if needed */
+}
+
+.projects {
+  display: flex;           /* turns the container into a flexbox,
+                              so its children (.project) line up horizontally by default */
+
+  flex-wrap: nowrap;       /* prevents items from wrapping onto a new line
+  (they’ll stay on one line even if they overflow the screen) */
+  gap: 20px;               /* adds spacing between each project box (like margin but cleaner) */
+  overflow-x: auto;        /* if the projects don’t fit in the screen,
+                              a horizontal scroll bar will appear */
+
+  justify-content: flex-start; /* aligns the projects to the left of the container
+                                   (you could also use center, space-between, etc.) */
+
+  align-items: flex-start; /* aligns items vertically at the top 
+                              (you can change to center if you want them centered vertically) */
+}
+
+.project {
+  flex: 0 0 auto;          /* this makes sure each project keeps its own width
+                              and doesn’t shrink to fit */
+}
