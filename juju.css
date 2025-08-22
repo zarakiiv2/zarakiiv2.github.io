@@ -1,0 +1,119 @@
+body {
+    background-color: #ffc0cb;
+    font-family: Arial, sans-serif;
+    color: #444;
+opacity: 1;
+background-image: radial-gradient(#ffc0cb 5px, #c27e7e);
+background-size: 10px 10px;
+}
+
+.tf2-coconut {
+    width: 100%;        /* take full parent width */
+max-width: 2400px;    
+min-width:1200px; /* prevent it from getting too narrow */
+margin-left: auto;
+margin-right: auto;
+}
+.main-page {
+    background-color: rgb(243, 214, 214);
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;        /* take full parent width */
+max-width: 50%;    
+min-width:auto; /* prevent it from getting too narrow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-style: dashed;
+    border-color: #fcb7b7;
+ /* prevent it from getting too wide */
+
+}
+
+/* */
+
+.title {
+    background-color: rgb(240, 216, 216);
+    border-radius: 12px;
+    padding: 30px;
+    width: fit-content;
+max-width: 70%;     /* prevent it from getting too wide */
+border-style: dashed;
+border-color: #ffcbcb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+.centered {
+     margin-left: auto;
+    margin-right: auto;
+}
+
+h1  {
+    font-size: 90px; /* You can adjust the value as needed */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+p {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.group {
+  display: flex;          /* activates Flexbox layout */
+  flex-direction: row;    /* place children left→right */
+  align-items: center;    /* vertically center items in the row */
+  gap: 0.5rem;            /* space between items (tweak as needed) */
+  flex-wrap: nowrap;      /* keep everything on ONE line (no wrapping) */
+}
+.group.wrap {
+  flex-wrap: wrap;        /* items will flow to the next line if needed */
+}
+
+.group-vert {
+  display: flex;          /* activates Flexbox layout */
+  flex-direction: column;    /* place children up and */
+  align-items: center;    /* vertically center items in the row */
+  gap: 0.5rem;            /* space between items (tweak as needed) */
+  flex-wrap: nowrap;      /* keep everything on ONE line (no wrapping) */
+}
+.group.wrap {
+  flex-wrap: wrap;        /* items will flow to the next line if needed */
+}
+.img-box {
+    border-color: #ffdfdf;
+    border: #fdc2c2 6px solid; /* border color and width */
+    width: 260px;           /* fixed width for each image box */
+    height: 200px;          /* fixed height for each image box */
+    max-height: 70%;     /* prevent it from getting too tall */
+    max-width: 100%;      /* prevent it from getting too wide */
+    overflow: hidden;       /* hide overflow if image is larger */
+    border-radius: 8px;     /* rounded corners for the image box */
+}
+.textbox {
+      background-color: rgb(255, 237, 237);
+    border-radius: 12px;
+    padding: 10px;
+   width: 100%;        /* take full parent width */
+max-width: 70%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* prevent it from getting too wide */
+
+
+
+}
+.box {
+    background: #ffdfdf;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;     
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: dashed;
+    border-color: #fcb7b7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
