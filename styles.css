@@ -131,8 +131,10 @@ hr {
 .text {
   font-size: 20px;          /* smaller text for body content */
   line-height: 1.6;         /* improves readability with more space between lines */
-  min-width: 300 px;
-  max-width: 1000px;         /* limits width for better readability */
+  min-width: 300 px;         /* limits width for better readability */
+  max-width: 1000px;  
+  margin-top: auto;   
+  margin-bottom: auto;    
 }
 
 address{
@@ -168,4 +170,28 @@ address{
 .project {
   flex: 0 0 auto;          /* this makes sure each project keeps its own width
                               and doesn’t shrink to fit */
+}
+
+.box {
+  max-width: 600px;         /* limits content width for better readability */
+  margin: 20px auto;        /* centers content and adds vertical spacing */
+  padding: 9px;            /* adds space inside the content area */
+  background-color: #a7e677;/* light gray background for contrast */
+  box-shadow: 0 2px 5px rgba(0,0,0.2,0.4); /* subtle shadow for depth */
+  left: 0;
+  width: 100%;
+  border-color: #333;
+  border-radius: 12px;
+}
+.img {
+  max-width: 60%;         /* limits content width for better readability */
+ max-height: fit-content;
+  margin: 20px auto;        /* centers content and adds vertical spacing */
+  padding: 9px;            /* adds space inside the content area */
+  background-color: #333;/* light gray background for contrast */
+  box-shadow: 0 2px 5px rgba(0,0,0.2,0.4); /* subtle shadow for depth */
+  left: 0;
+  width: 100%;
+  border-color: #333;
+  border-radius: 12px;
 }
